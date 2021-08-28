@@ -1,0 +1,181 @@
+<!--
+
+Todos os documentos HTML devem começar com uma declaração <!dOCTYPE>. A declaração não é uma tag HTML. É uma "informação" para o navegador sobre o tipo de documento paraesperar.
+
+-->
+<!DOCTYPE html>
+
+<!-- O elemento <head> é um container para metadados (dados sobre dados) e é colocado entre a etiqueta <html> e a etiqueta <body>. -->
+<html lang="pt-br">
+<head>
+    <!-- Metadados são dados sobre o documento HTML. Metadados não são exibidos. -->
+    <!-- Especifica a codificação de caracteres para o documento HTML -->
+    <meta charset="UTF-8">
+
+    <!-- Fornece um cabeçalho HTTP para a informação ou o valor do atributo "content" -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Definir a janela de visualização para que seu site tenha uma boa aparência em todos os dispositivos -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- A etiqueta "link" define a relação entre o documento atual e um recurso externo (ícone, CSS, JavaScript, fontes de Google Fonts, etc.). -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- Define um título para o documento HTML -->
+    <title>Cadastro Pessoal</title>
+</head>
+
+<!-- A etiqueta <body> define o corpo do documento. -->
+<body>
+    <!-- A etiqueta <div> é um bloqueio com um atributo "class" que define o estilo. Significa centralizar e limitar a largura máxima. -->
+    <div class="container">
+        <div class="group">
+
+            <!-- Define um título de primeiro cabeçalho -->
+            <h1>Cadastro Pessoal</h1>
+            <!-- A etiqueta <p> é parágrafo como um container -->
+            <p>* É obrigatório</p>
+
+            <!-- 
+                - A etiqueta <form> é usada para criar um formulário HTML para entrada do usuário 
+                - O atributo "action" é um encaminhamento da página externa ao enviar
+                - O atributo "method" especifica o método HTTP a ser usado ao enviar dados do formulário
+            -->
+            <form action="sucesso.html" method="get">
+
+                <!-- Agrupa as entradas para uma mesma linha, usando a grade (grid) e a flexibilidade (flex) na propriedade "display" -->
+                <div class="agrupado">
+                    <div>
+                        <!-- A etiqueta <label> define um rótulo para vários elementos -->
+                        <label for="nome">Nome</label><br>
+                        <!-- 
+                            - A etiqueta <input> especifica um campo de entrada onde o usuário pode inserir dados 
+                            - O atributo "type" define um tipo de campo de entrada
+                            - O atributo "name" define um nome do campo de entrada
+                            - O atributo "id" especifica o identificador do elemento do formulário ao qual o rótulo (<label>) deve ser vinculado
+                        -->
+                        <input type="text" name="nome" id="nome">
+                    </div>
+
+                    <div>
+                        <label for="sobrenome">Sobrenome</label><br>
+                        <input type="text" name="sobrenome" id="sobrenome">
+                    </div>
+                </div>
+
+                <div class="agrupado tres">
+                    <div>
+                        <label for="cpf">CPF*</label><br>
+                        <!-- 
+
+                            - O atributo "pattern" é uma expressão regular
+                            - O atributo "placeholder especifica uma pequena dica que descreve o valor esperado de um campo de entrada"\
+                            - O atributo "required" significa que é obrigatório preencher o campo antes de enviar o formulário
+                            - O atributo "aria-required" é mesmo como "required", mas deisgnado para pessoas com deficiência visual e com leitores de tela
+
+                         -->
+                        <input type="text" name="cpf" id="cpf" pattern="^\d{3}\x2E\d{3}\x2E\d{3}\x2D\d{2}$" placeholder="123.456.789-01" required aria-required="true">
+                    </div>
+
+                    <div>
+                        <label for="rg">RG</label><br>
+                        <input type="text" name="rg" id="rg" pattern="/(\d{1,2})(\d{3})(\d{3})(\d{1})$/">
+                    </div>
+
+                    <div>
+                        <label for="genero">Sexo</label><br>
+                        <!-- O elemento <select> é usado para criar uma lista suspensa a fim de escolher uma das opções. -->
+                        <select name="genero" id="genero">
+                            <option value="blank">Selecione</option>
+                            <option value="male">Masculino</option>
+                            <option value="female">Feminino</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="agrupado endereco-numero">
+                    <div>
+                        <label for="endereco">Endereço*</label><br>
+                        <input type="text" id="endereco" name="endereco" required />
+                    </div>
+
+                    <div>
+                        <label for="numero">Número*</label><br>
+                        <!-- O atributo "type" tem o valor de "number", que define o campo de entrada como apenas números -->
+                        <input type="number" id="numero" maxlength="4" name="numero" required />
+                    </div>
+                </div>
+
+                <div class="agrupado tres">
+                    <div>
+                        <label for="bairro">Bairro</label><br>
+                        <input type="text" id="bairro" name="bairro" />
+                    </div>
+
+                    <div>
+                        <label for="cidade">Cidade*</label><br>
+                        <input type="text" id="cidade" name="cidade" required />
+                    </div>
+
+                    <div>
+                        <label for="estado">Estado*</label> <br>
+                        <select name="estado" id="estado" required>
+                            <option value="selecione">Selecione</option>
+                            <option value="AC">Acre</option>
+                            <option value="AL">Alagoas</option>
+                            <option value="AP">Amapá</option>
+                            <option value="AM">Amazonas</option>
+                            <option value="BA">Bahia</option>
+                            <option value="CE">Ceará</option>
+                            <option value="DF">Distrito Federal</option>
+                            <option value="ES">Espírito Santo</option>
+                            <option value="GO">Goiás</option>
+                            <option value="MA">Maranhão</option>
+                            <option value="MT">Mato Grosso</option>
+                            <option value="MS">Mato Grosso do Sul</option>
+                            <option value="MG">Minas Gerais</option>
+                            <option value="PA">Pará</option>
+                            <option value="PB">Paraíba</option>
+                            <option value="PR">Paraná</option>
+                            <option value="PE">Pernambuco</option>
+                            <option value="PI">Piauí</option>
+                            <option value="RJ">Rio de Janeiro</option>
+                            <option value="RN">Rio Grande do Norte</option>
+                            <option value="RS">Rio Grande do Sul</option>
+                            <option value="RO">Rondônia</option>
+                            <option value="RR">Roraima</option>
+                            <option value="SC">Santa Catarina</option>
+                            <option value="SP">São Paulo</option>
+                            <option value="SE">Sergipe</option>
+                            <option value="TO">Tocantins</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="agrupado tres">
+                    <div>
+                        <label for="cep">CEP</label><br>
+                        <input type="text" id="cep" name="cep" pattern="\d{5}-?\d{3}" placeholder="012345-0123">
+                    </div>
+                    
+                    <div>
+                        <label for="celular">Celular*</label><br>
+                        <input type="text" id="celular" name="celular" placeholder="(DD) XXXXX-XXXX" pattern="^\([1-9]{2}\) (?:[2-8]|9[1-9])[0-9]{3}\-[0-9]{4}$" required/>
+                    </div>
+                    
+                    <div>
+                        <label for="celular">Telefone fixo</label><br>
+                        <input type="text" id="celular" name="celular" placeholder="(DD) XXXXX-XXXX" pattern="^\([1-9]{2}\) (?:[2-8]|9[1-9])[0-9]{3}\-[0-9]{4}$" required/>
+                    </div>
+                </div>
+
+                <!-- Um botão definido como uma submissão contendo o atributo "value", que é um valor, e o evento "onclick" que executa uma função em JavaScript quando o botão é clicado -->
+                <input type="submit" value="Enviar" onclick="enviar()">
+            </form>
+
+            <!-- O elemento <script> é usado para incorporar um script do lado do cliente (JavaScript) ou anexa um arquivo externo em JavaScript. -->
+            <script src="assets/js/script.js"></script>
+        </div>
+    </div>
+</body>
+</html>
