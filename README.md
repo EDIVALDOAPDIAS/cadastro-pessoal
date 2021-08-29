@@ -27,7 +27,7 @@ Dentro desse formulário, agrupamos os bloqueios de campos de entrada com rótul
 
 Temos rótulos (`label`), campos de entrada (`input`), lista suspensa de opções (`select`) e um botão (`<input type="submit">`). 
 
-Os campos de entrada podem conter os atributos `type` (tipo de campo de entrada), `name` (nome do campo), `id` (identificador do campo de entrada para vincular-se ao rótulo (`label`) que contém um atributo `for`), `pattern` (uma expressão regular que valida a entrada do campo), `placeholder` (um valor da pequena dica) e `aria-reuired` (uma das regras da WCAG, semelhante ao `required`, designado para pessoas com deficiência visual e leitores de tela).
+Os campos de entrada podem conter os atributos `type` (tipo de campo de entrada), `name` (nome do campo), `id` (identificador do campo de entrada para vincular-se ao rótulo (`label`) que contém um atributo `for`), `pattern` (uma expressão regular que valida a entrada do campo), `placeholder` (um valor da pequena dica) e `aria-rqeuired` (uma das regras da WCAG, semelhante ao `required`, designado para pessoas com deficiência visual e leitores de tela).
 
 No fim, temos um botão definido como uma submissão contendo o atributo `value`, que é um valor, e o evento de JavaScript `onclick` que executa uma função em JavaScript quando o botão é clicado.
 
@@ -36,5 +36,7 @@ Depois, o elemento `<script>` é usado para incorporar um *script* do lado do cl
 # Referências
 
 - [Expressão regular de RG](https://pt.stackoverflow.com/questions/22431/express%C3%A3o-regular-para-rg)
-- [EXpressão regular de CPF]()
+- [EXpressão regular de CPF](https://pt.stackoverflow.com/questions/11045/express%C3%A3o-regular-para-validar-um-campo-que-aceita-cpf-ou-cnpj)
+- [CSS Grid Layout e Flexbox - Quando Utilizar](https://www.youtube.com/watch?v=x-4z_u8LcGc)
+- [Usando o atributo `aria-required`](https://developer.mozilla.org/pt-BR/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-required_attribute)
 
