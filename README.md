@@ -3,9 +3,9 @@
 ## Autoria
 
 - **Nome:** Edivaldo Aparecido Dias
-- **Idade:** 41 Anos
+- **Idade:** 43 Anos
 - **Tipo de deficiência:** Nervo óptico atrofiado no olho direito.
-- **CID:** H54.5
+- **CID:** H54.4
 
 ## Descrição
 
